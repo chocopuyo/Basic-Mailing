@@ -1,0 +1,15 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @mail.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @mail.body %>
+</p>
+
+
+<%= link_to 'Edit', edit_mail_path(@mail) %> |
+<%= link_to 'Back', mails_path %>
