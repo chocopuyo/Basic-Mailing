@@ -110,6 +110,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  actionmailer
   coffee-rails (~> 3.1.0)
   jquery-rails
   mail
