@@ -13,6 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
+    UserMailer.welcome_email().deliver
     @user = User.find(params[:id])
 
     respond_to do |format|
