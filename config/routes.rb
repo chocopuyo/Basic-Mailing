@@ -1,10 +1,11 @@
 BasicMailing::Application.routes.draw do
-  resources :mails
 
   get 'users/creates'
   post 'users/creates'
+  get 'mail_bodies/send_mail'
+  post 'mail_bodies/send_mail'
   resources :users
-
+  resources :mail_bodies
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

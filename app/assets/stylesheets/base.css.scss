@@ -1,0 +1,43 @@
+html{
+  height:100%;
+}
+div#menu{
+  background-color:#d1e9db;
+  width:150px;
+  min-height:500px;
+  max-height:100%;
+  float:left;
+}
+div#container{
+  background-color:#e1f9eb;
+  width:694px;
+  max-height:100%;
+  float:left;
+  position:relative;
+  padding:3px;
+  h1{
+    font-size:20px;
+    color:#ef6528;
+  }
+  h2{
+    border-left:4px
+  }
+  p{
+    margin:5px;
+  }
+}
+div#logo{
+  background-color:#d1e9db;
+  width:850px;
+  height:40px;
+  position:relative;
+  div#wrapper_logo{
+    margin:3px;
+    bottom:0;
+    width:auto;
+    position:absolute;
+    h1{
+      color:#888;
+    }
+  }
+}

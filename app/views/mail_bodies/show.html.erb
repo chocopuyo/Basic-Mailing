@@ -1,0 +1,20 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @mail_body.title %>
+</p>
+
+<p>
+  <b>Body:</b>
+  <%= @mail_body.body %>
+</p>
+
+<p>
+  <b>Flag:</b>
+  <%= @mail_body.flag %>
+</p>
+
+
+<%= link_to 'Edit', edit_mail_body_path(@mail_body) %> |
+<%= link_to 'Back', mail_bodies_path %>

@@ -3,7 +3,9 @@
 one:
   title: MyText
   body: MyText
+  flag: 1
 
 two:
   title: MyText
   body: MyText
+  flag: 1

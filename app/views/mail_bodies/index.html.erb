@@ -1,0 +1,23 @@
+<h1>メールBOX</h1>
+<%= link_to '新規メール作成', new_mail_body_path %>
+<% @mail_bodies.each do |mail_body| %>
+    <h2>件名</h2>
+    <p><%= mail_body.title %></p>
+    <h2>本文</h2>
+    <p><%= mail_body.body %></p>
+    <h2>送ったかどうか</h2>
+    <p>
+    <%if mail_body.flag %>
+      送信済み
+    <%else%>
+      未送信 
+    <%end%> 
+      </p>
+    <%#= link_to 'Show', mail_body %>
+    <%= link_to 'Edit', edit_mail_body_path(mail_body) %>
+    <%= link_to 'Destroy', mail_body, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'send', :action=>'send_mail', :id=>mail_body%>
+<% end %>
+
+<br />
+
