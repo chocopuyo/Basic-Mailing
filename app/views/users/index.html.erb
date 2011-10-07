@@ -25,5 +25,8 @@
 </table>
 
 <br />
-
 <%= link_to 'New User', new_user_path %>
+<%= form_tag('users/creates', :multipart => true) do %>
+  <%= file_field_tag 'csv' %><br />
+  <%= submit_tag("csvで増えるお（＾ω＾）") %>
+<% end %>

@@ -13,7 +13,7 @@ class UsersController < ApplicationController
   # GET /users/1
   # GET /users/1.json
   def show
-    UserMailer.welcome_email().deliver
+#    UserMailer.welcome_email().deliver
     @user = User.find(params[:id])
 
     respond_to do |format|
@@ -26,7 +26,6 @@ class UsersController < ApplicationController
   # GET /users/new.json
   def new
     @user = User.new
-
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @user }
@@ -79,6 +78,42 @@ class UsersController < ApplicationController
     respond_to do |format|
       format.html { redirect_to users_url }
       format.json { head :ok }
+    end
+  end
+  #大量にcsvからデータをつくるよ・ω・
+  def creates
+#    data = 'choco,puyo,chocopuyo@gmail.com
+#    choco,puyo,chocopuyo@gmail.com'
+    #仮置きしておくhashです
+    user_data = Hash::new
+    data = params[:csv]
+    if data
+      #csvのユーザーデータをパースして、どんどんデータベースに突っ込みまーす・ω・
+      CSV.parse(data.read) do |row|
+        user_data['fname']=row[0]
+        user_data['lname']=row[1]
+        user_data['email']=row[2]
+        user_data['flag']=0
+        @user = User.new(user_data)
+        #もしも保存に失敗したらトップにもどる
+        unless @user.save
+          respond_to do |format|
+            format.html { redirect_to action: "index" }
+            format.json { render json: @user.errors, status: :unprocessable_entity }
+          end
+        end
+      end
+      respond_to do |format|
+        format.html { redirect_to @user, notice: 'User was successfully created.' }
+        format.json { render json: @user, status: :created, location: @user }
+      end
+    else
+      #何もparamsが送られなかったらトップにもどる
+      respond_to do |format|
+        format.html {redirect_to action: "index" } 
+        format.json { render json: @users }
+      end
+
     end
   end
 end
