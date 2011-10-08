@@ -90,9 +90,9 @@ class UsersController < ApplicationController
     if data
       #csvのユーザーデータをパースして、どんどんデータベースに突っ込みまーす・ω・
       CSV.parse(data.read) do |row|
-        user_data['fname']=row[0]
-        user_data['lname']=row[1]
-        user_data['email']=row[2]
+        user_data['fname']="NoName"
+        user_data['lname']="NoName"
+        user_data['email']=row[0]
         user_data['flag']=0
         @user = User.new(user_data)
         #もしも保存に失敗したらトップにもどる
