@@ -84,7 +84,7 @@ class MailBodiesController < ApplicationController
 #    @users = User.all
     #@mail_body = MailBody.find(params[:id])
     @mail_body = MailBody.find(params[:id])
-    @mail_body.body = my_format(@mail_body.body)
+#    @mail_body.body = my_format(@mail_body.body)
     @mail_body.flag = 1
     if @mail_body.save
       @users = User.all
