@@ -1,5 +1,5 @@
 BasicMailing::Application.routes.draw do
-
+  get 'users/all_destroy'
   get 'users/creates'
   post 'users/creates'
   get 'mail_bodies/send_mail'

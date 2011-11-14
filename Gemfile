@@ -5,10 +5,12 @@ gem 'rails', '3.1.0'
 # Bundle edge Rails instead:
 # gem 'rails',     :git => 'git://github.com/rails/rails.git'
 
-gem 'mysql2'
+#gem 'mysql2'
 gem 'sqlite3'
 gem 'mail'
 gem 'actionmailer'
+gem 'execjs'
+gem 'therubyracer'
 require 'csv'
 #gem 'fastercsv'
 # Gems used only for assets and not required

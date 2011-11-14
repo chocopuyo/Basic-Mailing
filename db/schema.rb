@@ -14,16 +14,9 @@
 ActiveRecord::Schema.define(:version => 20111007134829) do
 
   create_table "mail_bodies", :force => true do |t|
-    t.text     "title"
+    t.string   "title"
     t.text     "body"
     t.integer  "flag"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "mails", :force => true do |t|
-    t.text     "title"
-    t.text     "body"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
