@@ -2,7 +2,7 @@ class UsersController < ApplicationController
   # GET /users
   # GET /users.json
   def index
-    @users = User.all
+    @users = User.paginate(:page => params[:page], :order => 'created_at desc', :per_page => 20)
 
     respond_to do |format|
       format.html # index.html.erb

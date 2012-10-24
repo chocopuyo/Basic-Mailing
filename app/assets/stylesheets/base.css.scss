@@ -1,20 +1,45 @@
 html{
   height:100%;
 }
-div#menu{
-  background-color:#d1e9db;
-  width:150px;
-  min-height:500px;
-  max-height:100%;
+body{
+  background-image:url(cotton-f.png);
+  height:100%;;
+}
+div#wrapper_container{
+  margin:auto;
+  height:100%;
+  width:1000px;
+}
+div#tate_right{
+  width:61px;
+  float:left;
+  background-image: url(bg_tate3+.png);
+  background-repeat:repeat-y;
+  min-height: 100%;
+}
+div#tate_left{
+  float:left;
+  width:61px;
+  background-image: url(bg_tate3.png);
+  background-repeat:repeat-y;
+  min-height: 100%;
+}
+div#center{
+  background-color: #fff;
+  height:100%;
   float:left;
 }
+div#logo{
+  margin-bottom:-3px;
+}
+div#menu{
+  background-color:#d1e9db;
+  width:878px;
+}
+
 div#container{
-  background-color:#e1f9eb;
-  width:694px;
-  max-height:100%;
-  float:left;
+  width:878px;
   position:relative;
-  padding:3px;
   h1{
     font-size:20px;
     color:#ef6528;
@@ -24,20 +49,5 @@ div#container{
   }
   p{
     margin:5px;
-  }
-}
-div#logo{
-  background-color:#d1e9db;
-  width:850px;
-  height:40px;
-  position:relative;
-  div#wrapper_logo{
-    margin:3px;
-    bottom:0;
-    width:auto;
-    position:absolute;
-    h1{
-      color:#888;
-    }
   }
 }

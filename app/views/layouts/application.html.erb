@@ -1,22 +1,29 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>BasicMailing</title>
-  <%= stylesheet_link_tag    "application" %>
-  <%= javascript_include_tag "application" %>
-  <%= csrf_meta_tags %>
-</head>
-<body>
-  <div id=logo>
-    <div id=wrapper_logo>
-      <h1>MailingSystem</h1>
+  <head>
+    <title>BasicMailing</title>
+    <%= stylesheet_link_tag    "application" %>
+    <%= javascript_include_tag "application" %>
+    <%= csrf_meta_tags %>
+  </head>
+  <body>
+    <div id="wrapper_container">
+      <div id="tate_left">
+      </div>
+      <div id="center">
+        <div id=logo>
+          <%= image_tag "msb.png",:size=>"878x180"%>
+        </div>
+        <div id=menu>
+          <%= render :partial =>'shared/menu' %>
+        </div>
+        <div id=container>
+          <%= yield %>
+        </div>
+      </div>
+      <div id="tate_right">
+      </div>
     </div>
-  </div>
-  <div id=menu>
-    <%= render :partial =>'shared/menu' %>
-  </div>
-  <div id=container>
-    <%= yield %>
   </div>
 </body>
 </html>

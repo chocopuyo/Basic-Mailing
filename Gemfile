@@ -11,6 +11,7 @@ gem 'mail'
 gem 'actionmailer'
 gem 'execjs'
 gem 'therubyracer'
+gem 'will_paginate'
 require 'csv'
 #gem 'fastercsv'
 # Gems used only for assets and not required

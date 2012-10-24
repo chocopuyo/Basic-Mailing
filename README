@@ -6,6 +6,16 @@
 Rails3.1.0
 Ruby1.9.2
 
+【利用方法】
+1.bundle install
+2.bundle exec rake db:migrate
+3.rails s
+4.localhost:3000にアクセス
+5.ユーザーは手作業で追加できるが、面倒なので、メアドだけのCSVを投入すると吉
+6.上のタブのmailをクリック
+7.mail>新規作成>必要事項を記入>create mail body>back>send>ひたすら待機>でメールを送れます
+8.メールを遅れたかどうかはgmailにログインしてみると吉
+
 【3.さいごに】
 著作権フリーです。
 いじってあそんでください・ω・
