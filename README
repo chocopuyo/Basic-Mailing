@@ -7,6 +7,7 @@ Rails3.1.0
 Ruby1.9.2
 
 【利用方法】
+0.config/environments/development.rbのuser@gmail.comとpasswordを使いたいgmailアカウントに変える
 1.bundle install
 2.bundle exec rake db:migrate
 3.rails s
